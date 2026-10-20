@@ -1,0 +1,54 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/playbooks",
+      "destination": "/blog#playbooks",
+      "permanent": true
+    },
+    {
+      "source": "/bg/playbooks",
+      "destination": "/bg/blog#playbooks",
+      "permanent": true
+    },
+    {
+      "source": "/bg/index",
+      "destination": "/bg",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/bg/case-studies/:slug",
+      "destination": "/bg-case-:slug"
+    },
+    {
+      "source": "/bg/blog/:slug",
+      "destination": "/bg-blog-:slug"
+    },
+    {
+      "source": "/bg/:page",
+      "destination": "/bg-:page"
+    },
+    {
+      "source": "/case-studies/:slug",
+      "destination": "/case-:slug"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog-:slug"
+    }
+  ]
+}
